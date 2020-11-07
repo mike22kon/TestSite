@@ -1,0 +1,79 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=greek');
+body {
+  margin-left:  0px;
+  margin-right:  0px;
+  background-image: url("logo01.png");
+
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  background-size: cover;
+  /*background-color: #363636;      xrwma selidas*/
+  color: white;
+	}                  							/*grammata selidas*/
+
+ul.sidenav {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  width: 25%;
+  background-color: #282828;      /*xrwma baras*/
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+ul.sidenav li a {
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  color: white;                   /*grammata baras*/
+  padding: 40px 30px;
+  text-decoration: none;
+}
+
+ul.sidenav li a.active {
+  background-color: #00897b;
+  color: white;                   /*grammata baras*/
+}
+
+ul.sidenav li a:hover:not(.active) {
+  background-color: #00897b;      /*xrwma hover baras*/
+  color: white;                   /*grammata baras*/
+}
+
+
+div.content {
+  margin-left: 25%;
+
+
+}
+
+@media screen and (max-width: 900px) {
+  body{
+    background-color: #363636;
+    background-image: none;
+
+
+  }
+  ul.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  ul.sidenav li a {
+    float: left;
+    padding: 15px;
+  }
+
+  div.content {margin-left: 0px;}
+}
+
+@media screen and (max-width: 400px) {
+  ul.sidenav li a {
+    text-align: center;
+    float: none;
+  }
+}

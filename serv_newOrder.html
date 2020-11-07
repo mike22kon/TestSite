@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="temp.css">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style media="screen">
+
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #f2f2f2;
+  max-width: 300px;
+  padding-bottom: 5px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: black;
+  font-size: 18px;
+}
+.titleDetails{
+  color: grey;
+  font-size: 13px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #00564d;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+button:hover, a:hover {
+  background-color:#00897b;
+}
+
+
+
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #00564d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+.submitButton:hover{
+  background-color:#00897b;
+}
+
+
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #eaeaea; /*xrwma gkri*/
+  padding: 20px;
+}
+/* Floating column for labels: 25% width */
+.col-25 {
+  color:black;
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit],  {
+
+    width: 100%;
+    margin-top: 0;
+  }
+}
+@media (min-width: 600px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    padding: 5px;
+  }
+}
+
+.grid-item {
+  padding: 2px;
+  font-size: 0px;
+  text-align: center;
+}
+</style>
+
+<title>Index_Serv/newOrder</title>
+</head>
+<body>
+
+
+  <ul class="sidenav">
+    <li><a href="index_Serv.php">Αρχική</a></li>
+    <li><a href="serv_newOrder.html" class="active">Νέα Παραγγελία</a></li>
+    <li><a href="serv_openOrders.php" >Ανοιχτές Παραγγελίες</a></li>
+    <li><a href="serv_closedOrders.php">Κλειστές Παραγγελίες</a></li>
+    <li><a href="serv_money.php">Ταμείο</a></li>
+    <li><a href="logout.php">Αποσύνδεση</a></li>
+  </ul>
+
+
+
+
+  <div class="content">
+    <h2 style="margin-top: 0px; margin-left: 10px;" >New Order</h2>
+
+    <div class="container">
+      <form action="action_page.php">
+
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">Table Number</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="firstname" >
+          </div>
+        </div>
+
+<!-- Menuuuuuuuuuuuuuuuuuuu -->
+        <div class="row">
+          <div class="col-25">
+            <label for="menu">Menu</label>
+          </div>
+          <div class="col-75">
+          <!-- edw to Menuuuuuuuuuuuuuuuuuuu -->
+          <div class="grid-container">
+
+            <div class="grid-item">
+              <div class="card">
+                <img src="menu\salad1.jpg" alt="John" style="width:100%">
+                <p class="title">Patates fournou</p>
+                <p class="titleDetails">sdfsdfsdf</p>
+                <p><button>Add</button></p>
+              </div>
+            </div>
+
+            <div class="grid-item">
+              <div class="card">
+                <img src="menu/salad2.png" alt="John" style="width:100%">
+                <p class="title">Patates fournou</p>
+                <p class="titleDetails">o</p>
+                <p><button>Add</button></p>
+              </div>
+
+            </div>
+            <div class="grid-item">
+              <div class="card">
+                <img src="menu/salad3.png" alt="John" style="width:100%">
+                <p class="title">Patates fournou</p>
+                <p class="titleDetails">o</p>
+                <p><button>Add</button></p>
+              </div>
+            </div>
+
+            <div class="grid-item">
+              <div class="card">
+                <img src="menu/salad4.png" alt="John" style="width:100%">
+                <p class="title">Patates fournou</p>
+                <p class="titleDetails">o</p>
+                <p><button>Add</button></p>
+              </div>
+            </div>
+
+            <div class="grid-item">
+              <!-- empty -->
+            </div>
+
+            <div class="grid-item">
+              <div class="card">
+                <img src="menu/pizza1.jpg" alt="John" style="width:100%">
+                <p class="title">Patates fournou</p>
+                <p class="titleDetails">o</p>
+                <p><button>Add</button></p>
+              </div>
+            </div>
+
+            <div class="grid-item">
+              <div class="card">
+                <img src="menu/pizza2.png" alt="John" style="width:100%">
+                <p class="title">Patates fournou</p>
+                <p class="titleDetails">o</p>
+                <p><button>Add</button></p>
+              </div>
+            </div>
+
+            <div class="grid-item">
+              <div class="card">
+                <img src="menu/pizza3.png" alt="John" style="width:100%">
+                <p class="title">Patates fournou</p>
+                <p class="titleDetails">o</p>
+                <p><button>Add</button></p>
+              </div>
+            </div>
+
+            <div class="grid-item">
+              <!-- empty -->
+            </div>
+            <div class="grid-item">
+              <!-- empty -->
+            </div>
+
+            <div class="grid-item">
+              <div class="card">
+                <img src="menu/kotopoulo.png" alt="John" style="width:100%">
+                <p class="title">Patates fournou</p>
+                <p class="titleDetails">o</p>
+                <p><button>Add</button></p>
+              </div>
+            </div>
+
+            <div class="grid-item">
+              <div class="card">
+                <img src="menu/pastitsio.png" alt="John" style="width:100%">
+                <p class="title">Patates fournou</p>
+                <p class="titleDetails">o</p>
+                <p><button>Add</button></p>
+              </div>
+            </div>
+
+            <div class="grid-item">
+              <div class="card">
+                <img src="menu/patates.jpg" alt="John" style="width:100%">
+                <p class="title">Patates fournou</p>
+                <p class="titleDetails">o</p>
+                <p><button>Add</button></p>
+              </div>
+            </div>
+
+            <div class="grid-item">
+              <div class="card">
+                <img src="menu/carbonara.jpg" alt="John" style="width:100%">
+                <p class="title">Patates fournou</p>
+                <p class="titleDetails">o</p>
+                <p><button>Add</button></p>
+              </div>
+            </div>
+
+            <div class="grid-item">
+              <div class="card">
+                <img src="menu/napoliten.png" alt="John" style="width:100%">
+                <p class="title">Patates fournou</p>
+                <p class="titleDetails">o</p>
+                <p><button>Add</button></p>
+              </div>
+            </div>
+
+          </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Comments</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <input class="submitButton" type="submit" value="Submit">
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+</body>
+
+
+</html>
